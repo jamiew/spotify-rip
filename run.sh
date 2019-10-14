@@ -8,8 +8,7 @@ if [ -z $playlist ]; then
 fi
 
 echo "Downloading $playlist ..."
-output=$(spotdl --playlist $playlist)
-echo $output
+output=$(spotdl --playlist $playlist 2>&1)
 
 # FIXME real sloppy regexin here
 # should just use awk or sed instead?
