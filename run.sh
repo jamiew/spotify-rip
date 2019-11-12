@@ -3,7 +3,7 @@
 playlist=$1
 
 if [ -z $playlist ]; then
-  echo "$0: specify playlist as first and only argument"
+  echo "$0: specify playlist URL as first and only argument"
   exit 1
 fi
 
@@ -17,6 +17,7 @@ echo "Playlist file => $textfile"
 
 dirname=$(basename $textfile .txt)
 outdir="$HOME/Music/spotify-rip/$dirname"
+mkdir -p $outdir
 echo "output directory: $outdir"
 
 spotdl --trim-silence -f "$outdir" --overwrite skip --list "$textfile"
