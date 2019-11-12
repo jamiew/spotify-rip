@@ -15,7 +15,8 @@ output=$(spotdl --playlist $playlist 2>&1)
 textfile=$(echo "$output" | egrep -o "to (.+)\.txt$" | cut -d' ' -f2)
 echo "Playlist file => $textfile"
 
-outdir="$HOME/Music/spotify-rip"
+dirname=$(basename $textfile .txt)
+outdir="$HOME/Music/spotify-rip/$dirname"
 echo "output directory: $outdir"
 
 spotdl --trim-silence -f "$outdir" --overwrite skip --list "$textfile"
