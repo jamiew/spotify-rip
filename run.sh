@@ -16,7 +16,8 @@ textfile=$(echo "$output" | egrep -o "to (.+)\.txt$" | cut -d' ' -f2)
 echo "Playlist file => $textfile"
 
 dirname=$(basename $textfile .txt)
-outdir="$HOME/Music/spotify-rip/$dirname"
+# outdir="$HOME/Music/spotify-rip/downloads/$dirname"
+outdir="$(pwd -P)/downloads/$dirname"
 mkdir -p $outdir
 echo "output directory: $outdir"
 
