@@ -21,6 +21,7 @@ outdir="$(pwd -P)/downloads/$dirname"
 mkdir -p $outdir
 echo "output directory: $outdir"
 
-spotdl --trim-silence -f "$outdir" --overwrite skip --list "$textfile"
+#spotdl --trim-silence -f "$outdir" --overwrite skip --list "$textfile"
+spotdl -f "$outdir" --overwrite skip --list "$textfile"
 
 # TODO import straight into Serato like a boss
