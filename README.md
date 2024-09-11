@@ -4,36 +4,17 @@ spotify-rip
 Some shell scripts around `spotdl` to make downloading MP3s
 from Spotify easier (specifically, via playlists)
 
-Install `spotdl` AKA [spotify-downloader](https://github.com/ritiek/spotify-downloader) via pip3:
-
-```
-pip3 install spotdl
-```
-
-In October 2019 that was the most reliable Spotify-ripping tool I found.
+In October 2019 [spotdl](https://github.com/spotDL/spotify-downloader) was the most reliable Spotify-ripping tool I found. 
+*Update Sept 2024*: it still is, don't ask me how I know, I just know
 
 Fun fact: `spotdl` doesn't actually download from Spotify, it just gets the playlist
-tracks then finds the songs on YouTube and fetches using `youtube-dl`, lol
+tracks then tries to find the same songs on YouTube and download from there, lol
 
 
 Setup
 -----
 
-I'm assuming you're on a Mac which still ships with python2 as default EYEROLL AMIRITE
-
-1. Install `spotdl`
-
-```
-pip3 install spotdl
-```
-
-2. You might need to install `youtube-dl`, you should have it anyway, it's awesome
-
-```
-brew install youtube-dl
-```
-
-Note: try to keep your `youtube-dl` up-to-date, YouTube breaks it all the time
+1. Install `spotdl` using [their install instructions](https://github.com/spotDL/spotify-downloader)
 
 
 Usage
@@ -43,12 +24,11 @@ Usage
 1. Copy its playlist URL (right-click -> copy)
 1. Run `./run.sh [your-spotify-playlist-url]`
 1. Rock the party
-1. Don't forget your needles
 
 
 License
 -------
 
-Public domain man
+MIT
 
 
